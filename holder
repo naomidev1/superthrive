@@ -1,0 +1,46 @@
+
+if ($_FILES["uploader_image"]["error"] === 4) {
+        echo "<script>alert('Image Does Not Exist');</script>";
+    } else {
+        $fileName = $_FILES['uploader_image']['name'];
+        $fileSize = $_FILES['uploader_image']['size'];
+        $tmpName  = $_FILES['uploader_image']['tmp_name'];
+
+        $validImageExtension = ['jpg', 'jpeg', 'png'];
+        $imageExtension = explode('.', $fileName);
+        $imageExtension = strtolower(end($imageExtension));
+
+        if (!in_array($imageExtension, $validImageExtension)) {
+            echo "<script>alert('Invalid Image Extension');</script>";
+        } else {
+            $newImageName = uniqid() . '.' . $imageExtension;
+            $targetPath = 'uploads/images/' . $newImageName;
+
+            if (move_uploaded_file($tmpName, $targetPath)) {
+                $query = "INSERT INTO gallarey (name, image, description, user_id) VALUES ('$name', '$newImageName', '$description', $userId)";
+                mysqli_query($conn, $query);
+
+                echo "<script>alert('Image Added Successfully'); window.location.href = 'edit_gallarey.php';</script>";
+            } else {
+                echo "<script>alert('Failed to upload image');</script>";
+            }
+        }
+    }
+
+
+
+    <!-- 
+
+     -->
+     $docFile = $targetDirectory . $newFileName;
+        move_uploaded_file($_FILES["docFiles"]["tmp_name"], $docFile);
+
+        // Handle uploader image upload
+        $uploaderImage = "uploads/images/" . basename($_FILES["uploader_image"]["name"]);
+        $imageFileType = strtolower(pathinfo($_FILES["uploader_image"]["name"], PATHINFO_EXTENSION));
+
+        if (!in_array($imageFileType, array("jpg", "jpeg", "png", "gif"))) {
+            $message = "Error: Only JPG, JPEG, PNG, and GIF files are allowed for uploader images.";
+            exit();
+        }
+        move_uploaded_file($_FILES["uploader_image"]["tmp_name"], $uploaderImage);

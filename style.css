@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/*  */
+.mainBody{
+    /* background-color: #4CAF50; */
+    display: flex;
+    width: 100%;
+}
+.mainBody .left{
+    width: 20%;
+    /* flex: 1; */
+    /* background-color: aquamarine; */
+}
+.mainBody .right{
+    width: 80%;
+    /*  flex: 2; */
+    /* background-color: aqua; */
+}
+/*  */
+.leftBar{
+    background-color: #191a27;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 12px 0;
+}
+.leftBar::-webkit-scrollbar{
+    width: 0px;
+}
+.logo{
+    width: 35%;
+    margin: auto;
+    margin-bottom: 22px;
+}
+.list a{
+    display: block;
+    background-color: #a7a7a7;
+    margin: 22px auto;
+    padding: 12px;
+    text-align: center;
+    color: #ffffff;
+    width: 90%;
+    transition: 1s ease;
+    border-radius: 7px;
+}
+.list a:hover{
+    background-color: #838383;
+    transform: scale(98%);
+}
+ .dropdown-button {
+    background-color: #4CAF50;
+    color: white;
+    /* padding: 12px; */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 2em;
+}
+/*  */
+.register{
+    background-color: #191a27;
+    width: 60%;
+    position: relative;
+    margin: 10% auto ;
+    color: #ffffff;
+    padding: 32px 0;
+    border-radius: 5px;
+}
+.register h2{
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+.register form {
+    width: 70%;
+    /* background-color: #4CAF50; */
+    margin: auto;
+}
+.register form input{
+    width: 100%;
+    display: block;
+    padding: 16px 9px; 
+    margin: 13px 0 ;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+.register form button, .register form a{
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 19px;
+    justify-content: space-between;
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: 1s ease;
+}
+.register form button:hover{
+    background-color: #22df28;
+}
+.Addgall{
+    background-color: #191a27;
+    width: 60%;
+    position: relative;
+    margin: 10% auto ;
+    color: #ffffff;
+    padding: 32px 0;
+    border-radius: 5px;
+}
+.Addgall h2{
+    text-align: center;
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+.Addgall .form{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    /* align-items: center; */
+}
+.Addgall .form .addright{
+    width: 60%;
+    padding:0 12px;
+    /* background-color: #22df28; */
+}
+.Addgall .form .addright input{
+    display: block;
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    font-size: 19px;
+}
+.Addgall .form .addright textarea{
+    width: 90%;
+    height: 30vh;
+    padding: 12px ;
+    border: none;
+    outline: none;
+    font-size: 19px;
+}
+.Addgall .form .addleft{
+    background-color: #838383;
+    width: 30%;
+    padding:9px 12px;
+    margin: 2.3em 9px;
+    border-radius: 8px;
+}
+.Addgall .form .addleft label{
+    font-size:1.5em;
+}
+.Addgall .form .addleft input{
+    margin-top: 22px;
+}
+.Addgall form button, .Addgall a{
+    padding: 12px ;
+    width: 20%;
+    border: none;
+    outline: none;
+    margin: 8px 10px;
+    background-color: #22df28;
+    color: #ffffff;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+
+/*  */
+.editDelete{
+    background-color: #c0c0c0;
+    padding: 22px 32px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.editDelete h2{
+    text-align: center;
+    margin: 22px 0;
+    color: #ffffff;
+    font-size: 2em;
+}
+.editDelete table th{
+    column-gap: 2px;
+    width: 25%;
+    margin: 12px 0;
+    font-size: 19px;
+}
+table th,td{
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+.editDelete table td{
+    text-align: center;
+    font-size: 19px;
+    padding: 12px;
+}
+.editDelete table td img{
+    width: 100%;
+    height: 9pc;
+}
+
+
+.editDelete form{
+    /* background-color: #22df28; */
+    width: auto;
+}
+.editDelete form input{
+    display: block;
+    padding: 12px;
+    margin: 12px 0;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+.editDelete form textarea{
+    display: block;
+    padding: 12px;
+    margin: 12px 0;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+.editDelete form button{
+    padding: 10px;
+    width: 20%;
+    cursor: pointer;
+}

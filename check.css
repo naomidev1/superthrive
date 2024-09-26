@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .rotate {
+    animation: rotate 2s linear infinite;
+  }
+  
